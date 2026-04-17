@@ -8,6 +8,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private float interactDistance=3f;
     [SerializeField] private Transform cameraTransform;
 
+    [SerializeField] private MinigameManager manager;
+
     private Interact currentInterectable;
 
     // Update is called once per frame
@@ -17,7 +19,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (currentInterectable!=null && Input.GetKeyDown(KeyCode.E))
         {
-            currentInterectable.Interaction();
+            currentInterectable.Interaction(manager);
         }    
     }
 

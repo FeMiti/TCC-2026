@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     [SerializeField] private Transform camera;
 
+    [SerializeField] private MinigameManager manager;
+
     [Header("Movement Settings")]
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float sprintSpeed = 10f;
@@ -46,6 +48,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if(manager.onMinigame) return;
         InputManagement();
         MouseLook();
         Movement();

@@ -1,4 +1,5 @@
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -8,11 +9,20 @@ public class Interact : MonoBehaviour
     [Header("Properties")]
     private bool playerNear=false;
 
-    public void Interaction()
+    [Header("Minigame")]
+    [SerializeField] private GameObject minigamePrefab;
+
+    public void Interaction(MinigameManager manager)
     {
-        if (playerNear)
+        if (!playerNear) return;
+
+        if (minigamePrefab != null)
         {
-            Debug.Log("Interagiu com o objeto!");
+            manager.OpenMinigame(minigamePrefab);
+        }
+        else
+        {
+            Debug.LogWarning("Sem minigame atribuido.");
         }
     }
 
