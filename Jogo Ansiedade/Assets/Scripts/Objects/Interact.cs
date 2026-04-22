@@ -11,10 +11,17 @@ public class Interact : MonoBehaviour
 
     [Header("Minigame")]
     [SerializeField] private GameObject minigamePrefab;
+    [SerializeField] private TaskList taskList;
 
     public void Interaction(MinigameManager manager)
     {
         if (!playerNear) return;
+
+        if (TaskManager.Instance.currentTask != taskList)
+        {
+            Debug.Log("Não é a tarefa.");
+            return;
+        }
 
         if (minigamePrefab != null)
         {

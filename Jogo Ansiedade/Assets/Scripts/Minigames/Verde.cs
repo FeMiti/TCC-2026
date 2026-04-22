@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Azul : MonoBehaviour, IMinigame
+public class Verde : MonoBehaviour, IMinigame
 {
     private MinigameManager minigameManager;
 
@@ -9,15 +9,15 @@ public class Azul : MonoBehaviour, IMinigame
         minigameManager=manager;
     }
 
-    public void MinigameAzul()
+    public void MinigameVerde()
     {
-        Debug.Log("azul");
+        Debug.Log("verde");
         FinishMinigame();
     }
 
     public void FinishMinigame()
     {
-        TaskManager.Instance.CompleteTask(TaskList.Azul);
+        TaskManager.Instance.CompleteTask(TaskList.Verde);
         minigameManager.CloseMinigame();
     }
 }
