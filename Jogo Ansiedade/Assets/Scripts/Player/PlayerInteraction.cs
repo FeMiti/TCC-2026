@@ -10,7 +10,7 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] private MinigameManager manager;
 
-    private Interact currentInterectable;
+    private MinigameInteract currentInterectable;
 
     // Update is called once per frame
     void Update()
@@ -30,7 +30,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit, interactDistance))
         {
-            Interact interact = hit.collider.GetComponent<Interact>();
+            MinigameInteract interact = hit.collider.GetComponent<MinigameInteract>();
 
             if (interact!=null)
             {

@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Interact : MonoBehaviour
+public class MinigameInteract : MonoBehaviour
 {
 
     [Header("Properties")]

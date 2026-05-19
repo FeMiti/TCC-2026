@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private float verticalVelocity;
     private float speed;
 
+    private bool isSprinting=false;
+
     [Header("Input")]
     private float moveInput;
     private float turnInput;
@@ -59,11 +61,23 @@ public class PlayerController : MonoBehaviour
         GroundMovement();
     }
 
+    public void StartSprint()
+    {
+        isSprinting=true;
+        speed = Mathf.Lerp(speed, sprintSpeed, sprintTransitionSpeed * Time.deltaTime);
+    }
+
+    public void StopSprint()
+    {
+        isSprinting=false;
+        speed = Mathf.Lerp(speed, walkSpeed, sprintTransitionSpeed * Time.deltaTime);
+    }
+
     private void GroundMovement()
     {
         Vector3 move = transform.right * turnInput + transform.forward * moveInput;
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (isSprinting)
         {
             speed = Mathf.Lerp(speed, sprintSpeed, sprintTransitionSpeed * Time.deltaTime);
         }
@@ -98,11 +112,6 @@ public class PlayerController : MonoBehaviour
         if (controller.isGrounded)
         {
             verticalVelocity = -1f;
-
-            if (Input.GetButtonDown("Jump"))
-            {
-                verticalVelocity = Mathf.Sqrt(jumpHeight * gravity * 2);
-            }
         }
         else
         {

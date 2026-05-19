@@ -14,11 +14,19 @@ public class TaskManager : MonoBehaviour
 
     public TaskList currentTask{get; private set;}
 
+    public int numberRemainingTasks;
+
+    private TaskUI taskUI;
+
     private void Awake()
     {
         Instance = this;
 
         remainingTasks = new List<TaskList>(allTasks);
+
+        numberRemainingTasks = remainingTasks.Count;
+
+        taskUI = GetComponentInChildren<TaskUI>();
 
         PickNextTask();
     }
@@ -40,12 +48,14 @@ public class TaskManager : MonoBehaviour
         {
             currentTask = TaskList.None;
             Debug.Log("Todas as tarefas completas!");
+            taskUI.UpdateTaskText(remainingTasks.Count);
             return;
         }
 
         int rand = Random.Range(0,remainingTasks.Count);
         currentTask=remainingTasks[rand];
 
+        taskUI.UpdateTaskText(remainingTasks.Count);
         Debug.Log("Nova tarefa: " + currentTask);
     }
 }
