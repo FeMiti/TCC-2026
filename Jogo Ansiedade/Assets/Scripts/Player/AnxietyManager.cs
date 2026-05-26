@@ -9,11 +9,11 @@ public class AnxietyManager : MonoBehaviour
 
     public static int maxAnxiety=100;
 
-    public int currentAnxiety;
+    public int currentAnxiety=0;
 
     public static int lowAnxietyLimit=40, highAnxietyLimit=70;
 
-    public AnxietyState currentState;
+    public AnxietyState currentState=AnxietyState.Calm;
 
     void Awake()
     {
@@ -39,7 +39,7 @@ public class AnxietyManager : MonoBehaviour
         {
             UpdateState(AnxietyState.Panicking);
         }
-        else if(currentAnxiety>=lowAnxietyLimit && currentState != AnxietyState.Anxious)
+        else if(currentAnxiety>=lowAnxietyLimit && currentAnxiety<highAnxietyLimit && currentState != AnxietyState.Anxious)
         {
             UpdateState(AnxietyState.Anxious);
         }
@@ -59,7 +59,7 @@ public class AnxietyManager : MonoBehaviour
         {
             UpdateState(AnxietyState.Calm);
         }
-        else if(currentAnxiety<highAnxietyLimit && currentState != AnxietyState.Anxious)
+        else if(currentAnxiety<highAnxietyLimit && currentAnxiety>=lowAnxietyLimit && currentState != AnxietyState.Anxious)
         {
             UpdateState(AnxietyState.Anxious);
         }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
+    public static PlayerController Instance;
+
     [Header("References")]
     private CharacterController controller;
     [SerializeField] private Transform camera;
@@ -31,6 +33,11 @@ public class PlayerController : MonoBehaviour
     [Header("Input")]
     private float moveInput;
     private float turnInput;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()

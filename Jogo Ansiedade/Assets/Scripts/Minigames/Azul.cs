@@ -15,6 +15,18 @@ public class Azul : MonoBehaviour, IMinigame
         FinishMinigame();
     }
 
+    public void Vermelho()
+    {
+        Debug.Log("vermelho");
+        AnxietyManager.Instance.IncreaseAnxiety(10);
+    }
+
+    public void Roxo()
+    {
+        Debug.Log("roxo");
+        AnxietyManager.Instance.DecreaseAnxiety(10);
+    }
+
     public void FinishMinigame()
     {
         TaskManager.Instance.CompleteTask(TaskList.Azul);

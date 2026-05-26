@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MinigameInteract : MonoBehaviour
+public class MinigameInteract : MonoBehaviour, IInteract
 {
 
     [Header("Properties")]
@@ -13,7 +13,7 @@ public class MinigameInteract : MonoBehaviour
     [SerializeField] private GameObject minigamePrefab;
     [SerializeField] private TaskList taskList;
 
-    public void Interaction(MinigameManager manager)
+    public void Interaction()
     {
         if (!playerNear) return;
 
@@ -25,7 +25,7 @@ public class MinigameInteract : MonoBehaviour
 
         if (minigamePrefab != null)
         {
-            manager.OpenMinigame(minigamePrefab);
+            MinigameManager.Instance.OpenMinigame(minigamePrefab);
         }
         else
         {
@@ -33,13 +33,13 @@ public class MinigameInteract : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter()
+    public void OnTriggerEnter()
     {
         playerNear=true;
         Debug.Log("Player perto!");
     }
 
-    private void OnTriggerExit()
+    public void OnTriggerExit()
     {
         playerNear=false;
         Debug.Log("Player longe!");

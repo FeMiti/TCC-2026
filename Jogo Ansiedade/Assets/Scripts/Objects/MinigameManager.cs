@@ -2,11 +2,18 @@ using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
 {
+    public static MinigameManager Instance;
+
     [SerializeField] private Transform container;
 
     private GameObject currentMinigame;
 
     public bool onMinigame=false;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public void OpenMinigame(GameObject prefab)
     {

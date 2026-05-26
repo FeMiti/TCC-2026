@@ -10,34 +10,34 @@ public class PlayerInteraction : MonoBehaviour
 
     [SerializeField] private MinigameManager manager;
 
-    private MinigameInteract currentInterectable;
+    private IInteract currentInterectable;
 
     // Update is called once per frame
     void Update()
     {
-        CheckInteraction();
+        CheckMinigameInteraction();
 
         if (currentInterectable!=null && Input.GetKeyDown(KeyCode.E))
         {
-            currentInterectable.Interaction(manager);
+            currentInterectable.Interaction();
         }    
     }
 
-    private void CheckInteraction()
+    private void CheckMinigameInteraction()
     {
         Ray ray = new Ray(cameraTransform.position,cameraTransform.forward);
         RaycastHit hit;
 
         if(Physics.Raycast(ray, out hit, interactDistance))
         {
-            MinigameInteract interact = hit.collider.GetComponent<MinigameInteract>();
+            IInteract interact = hit.collider.GetComponent<IInteract>();
 
             if (interact!=null)
             {
                 if (currentInterectable != interact)
                 {
                     currentInterectable=interact;
-                    Debug.Log("Olhando para objeto!");
+                    Debug.Log("Olhando para minigame!");
                 }
                 return;
             }
