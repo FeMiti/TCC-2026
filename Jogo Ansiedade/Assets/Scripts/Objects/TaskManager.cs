@@ -17,6 +17,7 @@ public class TaskManager : MonoBehaviour
     public int numberRemainingTasks;
 
     private TaskUI taskUI;
+    private ClockUI clockUI;
 
     private void Awake()
     {
@@ -27,6 +28,7 @@ public class TaskManager : MonoBehaviour
         numberRemainingTasks = remainingTasks.Count;
 
         taskUI = GetComponentInChildren<TaskUI>();
+        clockUI = GetComponentInChildren<ClockUI>();
 
         PickNextTask();
     }
@@ -49,6 +51,8 @@ public class TaskManager : MonoBehaviour
             currentTask = TaskList.None;
             Debug.Log("Todas as tarefas completas!");
             taskUI.UpdateTaskText(remainingTasks.Count);
+            ClockManager.Instance.StopAllCoroutines();
+            clockUI.EndClock();
             return;
         }
 
