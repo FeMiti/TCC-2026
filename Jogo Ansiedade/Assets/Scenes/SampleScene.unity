@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 3544584507060820347, guid: af9e3be89101ea648a5c1261a527f11c, type: 3}
-  taskList: 4
+  taskList: 3
 --- !u!65 &732097335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1776,8 +1776,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96421606370d34f40a18ae19fccbbf19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
-  minigamePrefab: {fileID: 9040490569606511162, guid: e5b0c164fa4bbad47a2f2626e9bbf0a3, type: 3}
-  taskList: 2
+  minigamePrefab: {fileID: 3842473737067138730, guid: 62ea11ce1d99d114aa74ebd38331495c, type: 3}
+  taskList: 4
 --- !u!65 &1316365328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2440,7 +2440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 9040490569606511162, guid: a976f071da1f5c3409b5faeaca210fd3, type: 3}
-  taskList: 3
+  taskList: 2
 --- !u!65 &1505615619
 BoxCollider:
   m_ObjectHideFlags: 0
