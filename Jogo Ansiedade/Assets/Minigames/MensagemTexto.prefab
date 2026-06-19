@@ -851,12 +851,12 @@ MonoBehaviour:
     - Errada 1
     - Errada 2
     - Errada 3
-  - question: Quer sair?
-    correctAnswer: Bora
+  - question: Bom Dia :)
+    correctAnswer: Bom dia =D
     wrongAnswers:
-    - Phil Mias
-    - Gatu
-    - Uh?
+    - Mau Dia >=(
+    - "Quem \xE9 voc\xEA?"
+    - kkkkkkkkk
   buttons:
   - {fileID: 188905869834886386}
   - {fileID: 2579767927178205922}

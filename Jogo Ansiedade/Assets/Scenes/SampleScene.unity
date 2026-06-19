@@ -2439,7 +2439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96421606370d34f40a18ae19fccbbf19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
-  minigamePrefab: {fileID: 9040490569606511162, guid: a976f071da1f5c3409b5faeaca210fd3, type: 3}
+  minigamePrefab: {fileID: 1203430671199110704, guid: 7ad7ebeca48d92b44a99f68710f2718b, type: 3}
   taskList: 2
 --- !u!65 &1505615619
 BoxCollider:
@@ -3341,7 +3341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a12591dea5fac41932b5077f67c99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaskManager
-  allTasks: 01000000020000000300000004000000
+  allTasks: 02000000010000000300000004000000
   numberRemainingTasks: 0
 --- !u!114 &1882357749
 MonoBehaviour:

@@ -17,7 +17,7 @@ public class Verde : MonoBehaviour, IMinigame
 
     public void FinishMinigame()
     {
-        TaskManager.Instance.CompleteTask(TaskList.ResponderMensagem);
+        TaskManager.Instance.CompleteTask(TaskList.FazerTarefa);
         minigameManager.CloseMinigame();
     }
 }

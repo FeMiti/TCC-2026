@@ -17,7 +17,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         CheckMinigameInteraction();
 
-        if (currentInterectable!=null && Input.GetKeyDown(KeyCode.E))
+        if (currentInterectable!=null && Input.GetKeyDown(KeyCode.E) && !MinigameManager.Instance.onMinigame)
         {
             currentInterectable.Interaction();
         }    

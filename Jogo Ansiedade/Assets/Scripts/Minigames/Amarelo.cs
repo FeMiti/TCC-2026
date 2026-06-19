@@ -17,7 +17,7 @@ public class Amarelo : MonoBehaviour, IMinigame
 
     public void FinishMinigame()
     {
-        TaskManager.Instance.CompleteTask(TaskList.Amarelo);
+        TaskManager.Instance.CompleteTask(TaskList.ReceberEntrega);
         minigameManager.CloseMinigame();
     }
 }
