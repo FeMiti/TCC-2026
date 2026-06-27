@@ -1,9 +1,6 @@
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-public class MinigameInteract : MonoBehaviour, IInteract
+public class RelaxMinigameInteract : MonoBehaviour, IInteract
 {
 
     [Header("Properties")]
@@ -11,17 +8,11 @@ public class MinigameInteract : MonoBehaviour, IInteract
 
     [Header("Minigame")]
     [SerializeField] private GameObject minigamePrefab;
-    [SerializeField] private TaskList taskList;
+
 
     public void Interaction()
     {
-        if (!playerNear) return;
-
-        if (TaskManager.Instance.currentTask != taskList)
-        {
-            Debug.Log("Não é a tarefa.");
-            return;
-        }
+        if(!playerNear) return;
 
         if (minigamePrefab != null)
         {
