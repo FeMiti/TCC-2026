@@ -7,5 +7,5 @@ public enum TaskList
     ResponderMensagem,
     FazerTarefa,
     /* Compulsion Tasks */
-    Compulsao
+    ChecarPorta
 }

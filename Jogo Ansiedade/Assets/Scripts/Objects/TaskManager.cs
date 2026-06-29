@@ -57,11 +57,12 @@ public class TaskManager : MonoBehaviour
             return;
         }
 
-        if(!lastWasCompulsion && (AnxietyManager.Instance.currentState==AnxietyState.Anxious || AnxietyManager.Instance.currentState == AnxietyState.Panicking))
+        if(!lastWasCompulsion)
         {
-            int comp = Random.Range(0,2);
-            Debug.Log(comp);
-            if((comp>1 && AnxietyManager.Instance.currentState==AnxietyState.Anxious) || (comp>=1 && AnxietyManager.Instance.currentState == AnxietyState.Panicking))
+            int roll = Random.Range(0,2);
+            int anxietyLevel = (int)AnxietyManager.Instance.currentState;
+            Debug.Log(roll + " " + anxietyLevel);
+            if(roll+anxietyLevel>=3)
             {
                 PickNextCompulsion();
                 return;
