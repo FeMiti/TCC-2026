@@ -36,12 +36,10 @@ public class TaskMinigameInteract : MonoBehaviour, IInteract
     public void OnTriggerEnter()
     {
         playerNear=true;
-        Debug.Log("Player perto!");
     }
 
     public void OnTriggerExit()
     {
         playerNear=false;
-        Debug.Log("Player longe!");
     }
 }

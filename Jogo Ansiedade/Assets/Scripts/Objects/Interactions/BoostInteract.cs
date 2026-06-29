@@ -32,13 +32,11 @@ public class BoostInteract : MonoBehaviour, IInteract
     public void OnTriggerEnter()
     {
         playerNear=true;
-        Debug.Log("Player perto!");
     }
 
     public void OnTriggerExit()
     {
         playerNear=false;
-        Debug.Log("Player longe!");
     }
 
     private IEnumerator Booster(float time)

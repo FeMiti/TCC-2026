@@ -19,6 +19,8 @@ public class AnxietyManager : MonoBehaviour
     {
         Instance=this;
 
+        Debug.Log("Ansiedade acordou");
+
         anxietyUI=GetComponentInChildren<AnxietyUI>();
     }
 
@@ -45,8 +47,6 @@ public class AnxietyManager : MonoBehaviour
         }
 
         anxietyUI.UpdateAnxietyBar();
-
-        Debug.Log("Ansiedade atual = " + currentAnxiety + " e estado atual = " + currentState);
     }
 
     public void DecreaseAnxiety(int anx)
@@ -65,8 +65,6 @@ public class AnxietyManager : MonoBehaviour
         }
 
         anxietyUI.UpdateAnxietyBar();
-
-        Debug.Log("Ansiedade atual = " + currentAnxiety + " e estado atual = " + currentState);
     }
 
     private void UpdateState(AnxietyState nextState)

@@ -27,14 +27,12 @@ public class HomeworkMinigame : MonoBehaviour, IMinigame
 
     public void CheckAnswer()
     {
-        Debug.Log("Tentando checar");
         bool isCorrect=false;
         for(int i = 0; i < currentHomework.answers.Count(); i++)
         {
             if (answerInput.text.Trim().ToLower() == currentHomework.answers[i].Trim().ToLower())
             {
                 isCorrect=true;
-                Debug.Log("Resposta certa");
                 break;
             }
         }
