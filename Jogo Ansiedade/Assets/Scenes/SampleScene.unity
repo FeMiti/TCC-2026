@@ -1779,7 +1779,7 @@ GameObject:
   - component: {fileID: 982089276}
   - component: {fileID: 982089275}
   m_Layer: 0
-  m_Name: CuboRosa
+  m_Name: Porta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2034,7 +2034,7 @@ GameObject:
   - component: {fileID: 1316365327}
   - component: {fileID: 1316365326}
   m_Layer: 0
-  m_Name: CuboVerde
+  m_Name: Caderno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2548,7 +2548,7 @@ GameObject:
   - component: {fileID: 1475691434}
   - component: {fileID: 1475691440}
   m_Layer: 0
-  m_Name: CuboAzul
+  m_Name: CestoDeRoupas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2566,8 +2566,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96421606370d34f40a18ae19fccbbf19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
-  minigamePrefab: {fileID: 2773882759878813610, guid: fae358c4481d913458a874cc4ad29d97, type: 3}
-  taskList: 1
+  minigamePrefab: {fileID: 6540154089074254805, guid: 773413295a41e0b40aac2437aef2b8f6, type: 3}
+  taskList: 5
 --- !u!65 &1475691436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2697,7 +2697,7 @@ GameObject:
   - component: {fileID: 1505615618}
   - component: {fileID: 1505615617}
   m_Layer: 0
-  m_Name: CuboAmarelo
+  m_Name: Carteiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3638,8 +3638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a12591dea5fac41932b5077f67c99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaskManager
-  allTasks: 02000000010000000300000004000000
-  allCompulsions: 0500000006000000
+  allTasks: 02000000050000000300000004000000
+  allCompulsions: 0700000006000000
 --- !u!114 &1882357749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3847,7 +3847,7 @@ GameObject:
   - component: {fileID: 2046063644}
   - component: {fileID: 2046063643}
   m_Layer: 0
-  m_Name: CuboRosa (1)
+  m_Name: Pia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
