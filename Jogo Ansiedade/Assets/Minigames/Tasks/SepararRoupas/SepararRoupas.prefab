@@ -1563,10 +1563,10 @@ MonoBehaviour:
   - name: Saia
     correctPile: 2
     currentPile: 0
-  - name: Cueca
+  - name: Uniforme
     correctPile: 1
     currentPile: 0
-  - name: "Suti\xE3"
+  - name: Biquini
     correctPile: 2
     currentPile: 0
   - name: Terno
