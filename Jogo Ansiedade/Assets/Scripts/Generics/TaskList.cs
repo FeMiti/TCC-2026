@@ -9,5 +9,6 @@ public enum TaskList
     SepararRoupas,
     /* Compulsion Tasks */
     ChecarPorta,
-    LavarMaos
+    LavarMaos,
+    OrdenarLivros
 }
