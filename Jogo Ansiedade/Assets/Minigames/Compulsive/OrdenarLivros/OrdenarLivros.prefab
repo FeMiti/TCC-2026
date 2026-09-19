@@ -906,7 +906,7 @@ MonoBehaviour:
     height: -1
     width: 3
   - id: 1
-    name: Dom Quixote
+    name: Duna
     color: 1
     height: 0
     width: -2
@@ -916,7 +916,7 @@ MonoBehaviour:
     height: 1
     width: -3
   - id: 3
-    name: Vidas Secas
+    name: "O Senhor dos An\xE9is"
     color: 3
     height: -2
     width: 1
@@ -926,12 +926,12 @@ MonoBehaviour:
     height: 3
     width: 2
   - id: 5
-    name: Dom Casmurro
+    name: "Mem\xF3rias P\xF3stumas de Br\xE1s Cubas"
     color: 5
     height: -3
     width: 0
   - id: 6
-    name: "Mem\xF3rias P\xF3stumas de Br\xE1s Cubas"
+    name: O Chamado de Cthulhu
     color: 6
     height: -2
     width: -1

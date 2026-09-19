@@ -830,6 +830,7 @@ GameObject:
   - component: {fileID: 549461632}
   - component: {fileID: 549461631}
   - component: {fileID: 549461630}
+  - component: {fileID: 549461636}
   m_Layer: 0
   m_Name: Estante
   m_TagString: Untagged
@@ -871,7 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 7345438224365523090, guid: d38eb16718f4c5040aaa4e7566a3670b, type: 3}
-  taskList: 8
+  taskList: 7
 --- !u!65 &549461632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -965,6 +966,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &549461636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549461629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb35f53ec78a6148a56744648c30c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Highlightable
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &638882660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,6 +1374,7 @@ GameObject:
   - component: {fileID: 732097335}
   - component: {fileID: 732097334}
   - component: {fileID: 732097333}
+  - component: {fileID: 732097339}
   m_Layer: 0
   m_Name: Celular
   m_TagString: Untagged
@@ -1401,7 +1416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 3544584507060820347, guid: af9e3be89101ea648a5c1261a527f11c, type: 3}
-  taskList: 3
+  taskList: 2
 --- !u!65 &732097335
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1495,6 +1510,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &732097339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732097332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb35f53ec78a6148a56744648c30c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Highlightable
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &759965319
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,6 +1955,7 @@ GameObject:
   - component: {fileID: 982089277}
   - component: {fileID: 982089276}
   - component: {fileID: 982089275}
+  - component: {fileID: 982089281}
   m_Layer: 0
   m_Name: Porta
   m_TagString: Untagged
@@ -1968,7 +1997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 5714389485753198293, guid: 052cbb720cfd1564aabdf4f47a0d0c67, type: 3}
-  taskList: 6
+  taskList: 5
 --- !u!65 &982089277
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2062,6 +2091,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 232.444, z: 0}
+--- !u!114 &982089281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982089274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb35f53ec78a6148a56744648c30c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Highlightable
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &1264272422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2182,6 +2224,7 @@ GameObject:
   - component: {fileID: 1316365328}
   - component: {fileID: 1316365327}
   - component: {fileID: 1316365326}
+  - component: {fileID: 1316365332}
   m_Layer: 0
   m_Name: Caderno
   m_TagString: Untagged
@@ -2223,7 +2266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 3842473737067138730, guid: 62ea11ce1d99d114aa74ebd38331495c, type: 3}
-  taskList: 4
+  taskList: 3
 --- !u!65 &1316365328
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2317,6 +2360,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1316365332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316365325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb35f53ec78a6148a56744648c30c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Highlightable
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &1406557944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2696,6 +2752,7 @@ GameObject:
   - component: {fileID: 1475691436}
   - component: {fileID: 1475691434}
   - component: {fileID: 1475691440}
+  - component: {fileID: 1475691441}
   m_Layer: 0
   m_Name: CestoDeRoupas
   m_TagString: Untagged
@@ -2716,7 +2773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 6540154089074254805, guid: 773413295a41e0b40aac2437aef2b8f6, type: 3}
-  taskList: 5
+  taskList: 4
 --- !u!65 &1475691436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2831,6 +2888,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 1, y: 0, z: 0}
+--- !u!114 &1475691441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1475691433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb35f53ec78a6148a56744648c30c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Highlightable
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &1505615616
 GameObject:
   m_ObjectHideFlags: 0
@@ -2845,6 +2915,7 @@ GameObject:
   - component: {fileID: 1505615619}
   - component: {fileID: 1505615618}
   - component: {fileID: 1505615617}
+  - component: {fileID: 1505615623}
   m_Layer: 0
   m_Name: Carteiro
   m_TagString: Untagged
@@ -2886,7 +2957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 1203430671199110704, guid: 7ad7ebeca48d92b44a99f68710f2718b, type: 3}
-  taskList: 2
+  taskList: 1
 --- !u!65 &1505615619
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2980,6 +3051,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1505615623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505615616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb35f53ec78a6148a56744648c30c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Highlightable
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &1565971138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3768,6 +3852,7 @@ GameObject:
   - component: {fileID: 1882357748}
   - component: {fileID: 1882357753}
   - component: {fileID: 1882357754}
+  - component: {fileID: 1882357755}
   m_Layer: 5
   m_Name: MainUI
   m_TagString: Untagged
@@ -3787,8 +3872,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a12591dea5fac41932b5077f67c99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaskManager
-  allTasks: 02000000050000000300000004000000
-  allCompulsions: 060000000700000008000000
+  allTasks: 01000000020000000300000004000000
+  allCompulsions: 050000000600000007000000
 --- !u!114 &1882357749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3902,6 +3987,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClockManager
   currentHour: 0
   currentMinute: 0
+--- !u!114 &1882357755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882357747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1032e2ce1404e6c4bb6a717068cd6877, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HighlightManager
+  taskHighlights:
+  - task: 1
+    target: {fileID: 1505615623}
+  - task: 2
+    target: {fileID: 732097339}
+  - task: 3
+    target: {fileID: 1316365332}
+  - task: 4
+    target: {fileID: 1475691441}
+  - task: 5
+    target: {fileID: 982089281}
+  - task: 6
+    target: {fileID: 2046063649}
+  - task: 7
+    target: {fileID: 549461636}
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &1894312034
 GameObject:
   m_ObjectHideFlags: 0
@@ -3995,6 +4108,7 @@ GameObject:
   - component: {fileID: 2046063645}
   - component: {fileID: 2046063644}
   - component: {fileID: 2046063643}
+  - component: {fileID: 2046063649}
   m_Layer: 0
   m_Name: Pia
   m_TagString: Untagged
@@ -4036,7 +4150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interagir
   minigamePrefab: {fileID: 7509554885250040169, guid: 76a766f32731a57478619b9555b29af0, type: 3}
-  taskList: 7
+  taskList: 6
 --- !u!65 &2046063645
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4130,6 +4244,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 160.501, z: 0}
+--- !u!114 &2046063649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046063642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb35f53ec78a6148a56744648c30c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Highlightable
+  outlineMaterial: {fileID: 2100000, guid: 8541ec011d63d0c4bbe8816814826223, type: 2}
 --- !u!1 &2105780132
 GameObject:
   m_ObjectHideFlags: 0

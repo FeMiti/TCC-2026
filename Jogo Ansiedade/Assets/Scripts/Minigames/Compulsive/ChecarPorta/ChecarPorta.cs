@@ -17,7 +17,9 @@ public class ChecarPorta : MonoBehaviour, IMinigame
 
     [SerializeField] private TMP_Text checksText;
 
-    private float maxTime=5f;
+    private float maxTime=2f;
+
+    private float timeBarInterval=0.2f;
 
     private float currentTime;
 
@@ -74,9 +76,9 @@ public class ChecarPorta : MonoBehaviour, IMinigame
 
         while (currentTime > 0)
         {
-            yield return new WaitForSecondsRealtime(1f);
+            yield return new WaitForSecondsRealtime(timeBarInterval);
 
-            currentTime--;
+            currentTime-=timeBarInterval;
 
             timeBar.value=currentTime;
         }

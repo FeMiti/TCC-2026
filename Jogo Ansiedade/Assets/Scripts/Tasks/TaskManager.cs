@@ -54,6 +54,7 @@ public class TaskManager : MonoBehaviour
             taskUI.UpdateTaskText(remainingTasks.Count);
             ClockManager.Instance.StopAllCoroutines();
             clockUI.EndClock();
+            HighlightManager.Instance.ClearHighlight();
             return;
         }
 
@@ -73,6 +74,7 @@ public class TaskManager : MonoBehaviour
         currentTask=remainingTasks[rand];
 
         taskUI.UpdateTaskText(remainingTasks.Count);
+        HighlightManager.Instance.HighlightTask(currentTask);
         lastWasCompulsion=false;
     }
 
@@ -82,6 +84,7 @@ public class TaskManager : MonoBehaviour
         currentTask=allCompulsions[rand];
 
         taskUI.UpdateTaskText(remainingTasks.Count);
+        HighlightManager.Instance.HighlightTask(currentTask);
         lastWasCompulsion=true;
     }
 }

@@ -29,6 +29,7 @@ public class AnxietyManager : MonoBehaviour
     {
         currentAnxiety=0;
         currentState=AnxietyState.Calm;
+        HighlightManager.Instance.ChangeHighlightColor(currentState);
     }
 
     public void IncreaseAnxiety(int anx)
@@ -70,5 +71,6 @@ public class AnxietyManager : MonoBehaviour
     private void UpdateState(AnxietyState nextState)
     {
         currentState=nextState;
+        HighlightManager.Instance.ChangeHighlightColor(currentState);
     }
 }

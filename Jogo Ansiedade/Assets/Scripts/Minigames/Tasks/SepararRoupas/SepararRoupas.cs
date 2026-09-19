@@ -160,7 +160,7 @@ public class SepararRoupas : MonoBehaviour, IMinigame
 
     public IEnumerator FailMinigame()
     {
-        AnxietyManager.Instance.IncreaseAnxiety(5);
+        AnxietyManager.Instance.IncreaseAnxiety(5*numberOfErrors);
 
         yield return StartCoroutine(BlinkRed());
 

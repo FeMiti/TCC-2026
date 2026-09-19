@@ -15,7 +15,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckMinigameInteraction();
+        CheckInteraction();
 
         if (currentInterectable!=null && Input.GetKeyDown(KeyCode.E) && !MinigameManager.Instance.onMinigame)
         {
@@ -23,7 +23,7 @@ public class PlayerInteraction : MonoBehaviour
         }    
     }
 
-    private void CheckMinigameInteraction()
+    private void CheckInteraction()
     {
         Ray ray = new Ray(cameraTransform.position,cameraTransform.forward);
         RaycastHit hit;
