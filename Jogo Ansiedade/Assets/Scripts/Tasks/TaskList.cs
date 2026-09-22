@@ -6,6 +6,7 @@ public enum TaskList
     ResponderMensagem,
     FazerTarefa,
     SepararRoupas,
+    LavarLouça,
     /* Compulsion Tasks */
     ChecarPorta,
     LavarMaos,
