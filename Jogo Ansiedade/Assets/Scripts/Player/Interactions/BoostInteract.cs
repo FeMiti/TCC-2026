@@ -41,7 +41,7 @@ public class BoostInteract : MonoBehaviour, IInteract
 
     private IEnumerator Booster(float time)
     {
-        yield return new WaitForSecondsRealtime(time);
+        yield return new WaitForSeconds(time);
 
         PlayerController.Instance.StopSprint();
         isBoosted=false;

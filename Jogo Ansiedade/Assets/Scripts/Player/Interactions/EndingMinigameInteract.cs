@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TaskMinigameInteract : MonoBehaviour, IInteract
+public class EndingMinigameInteract : MonoBehaviour, IInteract
 {
 
     [Header("Properties")]
@@ -12,6 +12,8 @@ public class TaskMinigameInteract : MonoBehaviour, IInteract
     [Header("Minigame")]
     [SerializeField] private GameObject minigamePrefab;
     [SerializeField] private TaskList taskList;
+
+    [SerializeField] private CanvasGroup gameUI;
 
     public void Interaction()
     {
@@ -26,6 +28,8 @@ public class TaskMinigameInteract : MonoBehaviour, IInteract
         if (minigamePrefab != null)
         {
             HighlightManager.Instance.ClearHighlight();
+            PauseMenu.Instance.onEnding=true;
+            PauseMenu.Instance.SetCanvas(gameUI,false);
             MinigameManager.Instance.OpenMinigame(minigamePrefab);
         }
         else

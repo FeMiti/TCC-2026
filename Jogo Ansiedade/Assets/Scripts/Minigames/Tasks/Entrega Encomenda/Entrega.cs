@@ -30,6 +30,8 @@ public class Entrega : MonoBehaviour, IMinigame
 
     private void Update()
     {
+        if(PauseMenu.Instance.isPaused) return;
+
         if (Input.inputString.Length > 0)
         {
             char typedChar=Input.inputString[0];

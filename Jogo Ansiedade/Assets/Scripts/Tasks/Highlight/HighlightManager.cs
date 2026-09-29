@@ -20,7 +20,7 @@ public class HighlightManager : MonoBehaviour
 
     private void Update()
     {
-        if(currentHighlight==null) return;
+        if(currentHighlight==null || PauseMenu.Instance.isPaused) return;
 
         float alpha = Mathf.Lerp(0f,0.3f,(Mathf.Sin(Time.time*3f)+1f)/2f);
 

@@ -17,6 +17,13 @@ public class ClockManager : MonoBehaviour
 
     private float timeUntilChange=10f;
 
+    private int timesUntilProcrastination=2;
+    private int timesUntilAnxiety=1;
+    public int timesSinceLastTask=0;
+    public int currentProcrastination;
+
+    private int anxietyPerProcrastination=10;
+
     void Awake()
     {
         Instance = this;
@@ -41,16 +48,33 @@ public class ClockManager : MonoBehaviour
             {
                 clockUI.UpdateClock();
 
-                yield return new WaitForSecondsRealtime(timeUntilChange);
+                yield return new WaitForSeconds(timeUntilChange);
 
                 currentMinute+=10;
+                timesSinceLastTask++;
+
+                if (timesSinceLastTask >= timesUntilProcrastination)
+                {
+                    if (timesSinceLastTask == timesUntilProcrastination)
+                    {
+                        currentProcrastination=timesUntilAnxiety;
+                    }
+                    
+                    currentProcrastination++;
+
+                    if (timesUntilAnxiety <= currentProcrastination)
+                    {
+                        AnxietyManager.Instance.IncreaseAnxiety(anxietyPerProcrastination);
+                        currentProcrastination=0;
+                    }
+                }
             }
 
             currentMinute=initialMinute;
             currentHour++;
         }
 
-        clockUI.EndClock();
+        EndingManager.Instance.EndGame(EndingList.OutOfTime);
     }
 }
 

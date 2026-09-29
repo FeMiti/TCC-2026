@@ -78,7 +78,7 @@ public class LavarLouça : MonoBehaviour, IMinigame
     {
         while (currentTime > 0)
         {
-            yield return new WaitForSecondsRealtime(timeBarInterval);
+            yield return new WaitForSeconds(timeBarInterval);
 
             currentTime-=timeBarInterval;
 

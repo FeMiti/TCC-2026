@@ -40,7 +40,7 @@ public class LavarMaos : MonoBehaviour, IMinigame
 
     private void Update()
     {
-        if (minigameStarted)
+        if (minigameStarted && !PauseMenu.Instance.isPaused)
         {
             if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -146,7 +146,7 @@ public class LavarMaos : MonoBehaviour, IMinigame
             arrows[i].rawImage.color=Color.red;
         }
 
-        yield return new WaitForSecondsRealtime(1f);
+        yield return new WaitForSeconds(1f);
 
         for(int i=0; i < numberOfCommands; i++)
         {

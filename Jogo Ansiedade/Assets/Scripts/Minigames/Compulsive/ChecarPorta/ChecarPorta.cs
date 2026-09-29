@@ -33,7 +33,7 @@ public class ChecarPorta : MonoBehaviour, IMinigame
 
     private void Update()
     {
-        if (minigameStarted)
+        if (minigameStarted && !PauseMenu.Instance.isPaused)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -76,7 +76,7 @@ public class ChecarPorta : MonoBehaviour, IMinigame
 
         while (currentTime > 0)
         {
-            yield return new WaitForSecondsRealtime(timeBarInterval);
+            yield return new WaitForSeconds(timeBarInterval);
 
             currentTime-=timeBarInterval;
 

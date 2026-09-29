@@ -10,5 +10,9 @@ public enum TaskList
     /* Compulsion Tasks */
     ChecarPorta,
     LavarMaos,
-    OrdenarLivros
+    OrdenarLivros,
+    /* Ending Tasks */
+    Descansar,
+    FalarComSuaIrmã,
+    PedirAjuda
 }

@@ -39,7 +39,6 @@ public class MinigameManager : MonoBehaviour
         currentMinigame.transform.localPosition=Vector3.zero;
         currentMinigame.transform.localScale=Vector3.one;
 
-        Time.timeScale=0f;
         Cursor.lockState=CursorLockMode.None;
         Cursor.visible=true;
     }
@@ -51,7 +50,6 @@ public class MinigameManager : MonoBehaviour
             Destroy(currentMinigame);
         }
 
-        Time.timeScale=1f;
         Cursor.lockState=CursorLockMode.Locked;
         Cursor.visible=false;
         onMinigame=false;

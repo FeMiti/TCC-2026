@@ -48,6 +48,11 @@ public class AnxietyManager : MonoBehaviour
         }
 
         anxietyUI.UpdateAnxietyBar();
+
+        if (currentAnxiety >= maxAnxiety)
+        {
+            EndingManager.Instance.EndGame(EndingList.PanicAttack);
+        }
     }
 
     public void DecreaseAnxiety(int anx)

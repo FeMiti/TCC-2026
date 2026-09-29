@@ -12,6 +12,8 @@ public class TaskManager : MonoBehaviour
 
     [SerializeField] private List<TaskList> allCompulsions;
 
+    [SerializeField] private List<TaskList> allEndings;
+
     private List<TaskList> remainingTasks = new List<TaskList>();
 
     public TaskList currentTask{get; private set;}
@@ -42,6 +44,11 @@ public class TaskManager : MonoBehaviour
 
         remainingTasks.Remove(completed);
 
+        if (!lastWasCompulsion)
+        {
+            ClockManager.Instance.timesSinceLastTask=0;
+        }
+
         PickNextTask();
     }
 
@@ -50,11 +57,7 @@ public class TaskManager : MonoBehaviour
         if (remainingTasks.Count == 0)
         {
             currentTask = TaskList.None;
-            Debug.Log("Todas as tarefas completas!");
-            taskUI.UpdateTaskText(remainingTasks.Count);
-            ClockManager.Instance.StopAllCoroutines();
-            clockUI.EndClock();
-            HighlightManager.Instance.ClearHighlight();
+            EndingManager.Instance.EndGame(EndingList.TasksCompleted);
             return;
         }
 
@@ -86,5 +89,13 @@ public class TaskManager : MonoBehaviour
         taskUI.UpdateTaskText(remainingTasks.Count);
         HighlightManager.Instance.HighlightTask(currentTask);
         lastWasCompulsion=true;
+    }
+
+    public void PickEndingTask()
+    {
+        currentTask=allEndings[(int)EndingManager.Instance.currentEnding];
+
+        taskUI.UpdateTaskText(0);
+        HighlightManager.Instance.HighlightTask(currentTask);
     }
 }

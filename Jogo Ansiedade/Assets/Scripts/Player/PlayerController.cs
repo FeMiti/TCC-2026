@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(manager.onMinigame) return;
+        if(manager.onMinigame || PauseMenu.Instance.isPaused) return;
         InputManagement();
         MouseLook();
         Movement();

@@ -22,11 +22,22 @@ public class ClockUI : MonoBehaviour
         }
     }
 
-    public void EndClock()
+    public void EndClock(EndingList ending)
     {
         hourText.text="";
         minutesText.text="";
         twoDotsText.text="";
-        finalText.text="Time's UP!";
+        switch (ending)
+        {
+            case EndingList.TasksCompleted:
+                finalText.text="All tasks completed!";
+                break;
+            case EndingList.OutOfTime:
+                finalText.text="Time's UP!";
+                break;
+            case EndingList.PanicAttack:
+                finalText.text="...";
+                break;
+        }
     }
 }

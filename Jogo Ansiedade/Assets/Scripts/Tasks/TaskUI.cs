@@ -11,14 +11,7 @@ public class TaskUI : MonoBehaviour
     public void UpdateTaskText(int remaining)
     {
         numberRemainingTasksText.text="Tarefas Restantes: " + remaining;
-
-        if(remaining!=0)
-        {
-            currentTaskText.text=TaskManager.Instance.currentTask.ToString();
-        }
-        else
-        {
-            currentTaskText.text="Todas as tarefas finalizadas!";
-        }
+        
+        currentTaskText.text=TaskManager.Instance.currentTask.ToString();
     }
 }

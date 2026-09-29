@@ -15,6 +15,8 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PauseMenu.Instance.isPaused) return;
+
         CheckInteraction();
 
         if (currentInterectable!=null && Input.GetKeyDown(KeyCode.E) && !MinigameManager.Instance.onMinigame)
