@@ -8,6 +8,8 @@ public class EndingManager : MonoBehaviour
 
     private ClockUI clockUI;
 
+    [SerializeField] private GameObject sister;
+
     private void Awake()
     {
         Instance=this;
@@ -25,6 +27,11 @@ public class EndingManager : MonoBehaviour
         if (MinigameManager.Instance.onMinigame)
         {
             MinigameManager.Instance.CloseMinigame();
+        }
+
+        if (currentEnding == EndingList.OutOfTime)
+        {
+            sister.SetActive(true);
         }
 
         TaskManager.Instance.PickEndingTask();

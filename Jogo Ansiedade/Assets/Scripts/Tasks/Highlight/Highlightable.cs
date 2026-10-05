@@ -1,35 +1,47 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Highlightable : MonoBehaviour
 {
     [SerializeField] private Material outlineMaterial;
 
-    private Renderer objectRenderer;
-    private Material[] originalMaterials;
+    private Renderer[] objectRenderer;
+    private Material[][] originalMaterials;
 
     private void Awake()
     {
-        objectRenderer = GetComponent<Renderer>();
+        objectRenderer = GetComponentsInChildren<Renderer>();
 
-        originalMaterials = objectRenderer.sharedMaterials;
+        originalMaterials = new Material[objectRenderer.Length][];
+
+        for(int i=0;i<objectRenderer.Length;i++)
+        {
+            originalMaterials[i] = objectRenderer[i].sharedMaterials;
+        }
     }
 
     public void EnableHighlight()
     {
-        Material[] materials = new Material[originalMaterials.Length+1];
+        for(int j = 0; j < objectRenderer.Length; j++)
+        {    
+            Material[] materials = new Material[originalMaterials[j].Length+1];
 
-        for(int i = 0; i < originalMaterials.Length; i++)
-        {
-            materials[i]=originalMaterials[i];
+            for(int i = 0; i < originalMaterials[j].Length; i++)
+            {
+                materials[i]=originalMaterials[j][i];
+            }
+
+            materials[materials.Length-1]=outlineMaterial;
+
+            objectRenderer[j].sharedMaterials=materials;
         }
-
-        materials[materials.Length-1]=outlineMaterial;
-
-        objectRenderer.sharedMaterials=materials;
     }
 
     public void DisableHighlight()
     {
-        objectRenderer.sharedMaterials=originalMaterials;
+        for(int i = 0; i < objectRenderer.Length; i++)
+        {
+            objectRenderer[i].sharedMaterials=originalMaterials[i];
+        }
     }
 }

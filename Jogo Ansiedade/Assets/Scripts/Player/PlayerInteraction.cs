@@ -34,6 +34,11 @@ public class PlayerInteraction : MonoBehaviour
         {
             IInteract interact = hit.collider.GetComponent<IInteract>();
 
+            if (interact == null)
+            {
+                interact = hit.collider.GetComponentInParent<IInteract>();
+            }
+
             if (interact!=null)
             {
                 if (currentInterectable != interact)
