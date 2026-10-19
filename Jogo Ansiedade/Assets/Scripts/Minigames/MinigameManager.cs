@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class MinigameManager : MonoBehaviour
@@ -6,6 +8,18 @@ public class MinigameManager : MonoBehaviour
 
     [SerializeField] private Transform container;
 
+    [Header("Randomizador de Minigames")]
+    public List<int> mensagens;
+    public List<int> entregas;
+    public List<int> tarefas;
+    public List<int> loucas;
+
+    [SerializeField] private int numberOfMensagens;
+    [SerializeField] private int numberOfPortas;
+    [SerializeField] private int numberOfTarefas;
+    [SerializeField] private int numberOfLoucas;
+
+
     private GameObject currentMinigame;
 
     public bool onMinigame=false;
@@ -13,6 +27,15 @@ public class MinigameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        //Definindo o tamanho
+        mensagens=Enumerable.Range(0,numberOfMensagens).ToList();
+        entregas=Enumerable.Range(0,numberOfPortas).ToList();
+        tarefas=Enumerable.Range(0,numberOfTarefas).ToList();
+        loucas=Enumerable.Range(0,numberOfLoucas).ToList();
     }
 
     public void OpenMinigame(GameObject prefab)

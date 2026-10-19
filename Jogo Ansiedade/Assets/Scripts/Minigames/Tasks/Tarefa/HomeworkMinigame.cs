@@ -9,7 +9,13 @@ public class HomeworkMinigame : MonoBehaviour, IMinigame
 {
     private MinigameManager minigameManager;
 
-    [SerializeField] private List<HomeworkData> homeworks;
+
+    [Header("Homeworks")]
+    [SerializeField] private List<HomeworkData> mathHomework;
+    [SerializeField] private List<HomeworkData> biologyHomework;
+    [SerializeField] private List<HomeworkData> historyHomework;
+    [SerializeField] private List<HomeworkData> geographyHomework;
+    [SerializeField] private List<HomeworkData> scienceHomework;
 
     [SerializeField] private TMP_InputField answerInput;
 
@@ -21,7 +27,29 @@ public class HomeworkMinigame : MonoBehaviour, IMinigame
     {
         minigameManager=manager;
 
-        currentHomework=homeworks[Random.Range(0,homeworks.Count)];
+        int rand = Random.Range(0,manager.tarefas.Count);
+
+        switch (rand)
+        {
+            case 0:
+                currentHomework=mathHomework[Random.Range(0,mathHomework.Count)];
+                break;
+            case 1:
+                currentHomework=biologyHomework[Random.Range(0,biologyHomework.Count)];
+                break;
+            case 2:
+                currentHomework=historyHomework[Random.Range(0,historyHomework.Count)];
+                break;
+            case 3:
+                currentHomework=geographyHomework[Random.Range(0,geographyHomework.Count)];
+                break;
+            case 4:
+                currentHomework=scienceHomework[Random.Range(0,scienceHomework.Count)];
+                break;
+        }
+
+        manager.tarefas.RemoveAt(rand);
+
         question.text=currentHomework.question;
     }
 

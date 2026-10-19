@@ -30,7 +30,7 @@ public class PlayerInteraction : MonoBehaviour
         Ray ray = new Ray(cameraTransform.position,cameraTransform.forward);
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit, interactDistance))
+        if(Physics.Raycast(ray, out hit, interactDistance, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Ignore))
         {
             IInteract interact = hit.collider.GetComponent<IInteract>();
 

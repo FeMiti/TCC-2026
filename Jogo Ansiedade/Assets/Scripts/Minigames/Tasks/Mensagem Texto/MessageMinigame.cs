@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 
 public class MessageMinigame : MonoBehaviour, IMinigame
@@ -23,7 +24,12 @@ public class MessageMinigame : MonoBehaviour, IMinigame
     {
         minigameManager=manager;
 
-        currentMessage=messages[Random.Range(0,messages.Count)];
+        int rand = Random.Range(0,manager.mensagens.Count);
+
+        currentMessage=messages[manager.mensagens[rand]];
+
+        manager.mensagens.RemoveAt(rand);
+
         questionText.text=currentMessage.question;
         currentMessage=ShuffleWrongMessages(currentMessage);
 

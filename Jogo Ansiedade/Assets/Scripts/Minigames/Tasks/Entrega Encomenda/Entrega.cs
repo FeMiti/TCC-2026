@@ -3,17 +3,22 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.ProBuilder.Shapes;
 using UnityEngine.UI;
 
 public class Entrega : MonoBehaviour, IMinigame
 {
     private MinigameManager minigameManager;
 
-    [SerializeField] private List<string> targetWords;
+    [SerializeField] private List<DoorData> entregas;
+
+    [SerializeField] private TMP_Text question;
 
     [SerializeField] private TMP_Text targetWordText;
 
     [SerializeField] private TMP_Text answerInput;
+
+    private DoorData doorData;
 
     private string currentWord;
 
@@ -23,8 +28,17 @@ public class Entrega : MonoBehaviour, IMinigame
     {
         minigameManager=manager;
 
-        currentWord=targetWords[Random.Range(0,targetWords.Count)];
+        int rand = Random.Range(0,manager.entregas.Count);
+
+        doorData = entregas[rand];
+
+        manager.entregas.RemoveAt(rand);
+
+        currentWord=doorData.targetAnswer;
         targetWordText.text=currentWord;
+
+        question.text=doorData.question;
+        
         UpdateDisplay();
     }
 
