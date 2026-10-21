@@ -249,8 +249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: 180}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchoredPosition: {x: -400, y: 150}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2661764629973820554
 CanvasRenderer:
@@ -396,8 +396,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: -300}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchoredPosition: {x: 400, y: -250}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2613880884631617237
 CanvasRenderer:
@@ -543,8 +543,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 480, y: 180}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchoredPosition: {x: 400, y: 150}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7616769548108567466
 CanvasRenderer:
@@ -845,18 +845,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MensagemTexto
   messages:
-  - question: Pergunta Teste
-    correctAnswer: Resposta Certa
+  - question: "A\xED, cara. T\xE1 ocupado?"
+    correctAnswer: Sim. Mas pode falar.
     wrongAnswers:
-    - Errada 1
-    - Errada 2
-    - Errada 3
-  - question: Bom Dia :)
-    correctAnswer: Bom dia =D
+    - "T\xF4"
+    - ...
+    - Fala comigo depois
+  - question: "Ei, Fulano. Topa sair com geral amanh\xE3?"
+    correctAnswer: Opa! Pode ser!
     wrongAnswers:
-    - Mau Dia >=(
-    - "Quem \xE9 voc\xEA?"
-    - kkkkkkkkk
+    - ...
+    - Depende... Com quem?
+    - "Voc\xEA est\xE1 me convidando? Mesmo?"
+  - question: Acabei de enviar o nosso trabalho pro professor.
+    correctAnswer: Vlw demais
+    wrongAnswers:
+    - Que trabalho?
+    - "T\xF4 ocupado"
+    - ...
+  - question: "oii, como vc t\xE1?"
+    correctAnswer: bem, e vc?
+    wrongAnswers:
+    - por que a pergunta?
+    - oi
+    - sim
+  - question: Foi mal por ontem. Acabei sendo meio babaca
+    correctAnswer: "Relaxa, mano. T\xE1 td certo."
+    wrongAnswers:
+    - Finalmente percebeu?
+    - "N\xE3o sei o que voc\xEA t\xE1 falando"
+    - Babaca
   buttons:
   - {fileID: 188905869834886386}
   - {fileID: 2579767927178205922}
@@ -1035,7 +1053,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 275, y: 50}
+  m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5315974069885821879
 CanvasRenderer:
@@ -1092,8 +1110,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1173,7 +1191,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6442615213585935463
 CanvasRenderer:
@@ -1384,8 +1402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -480, y: -300}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchoredPosition: {x: -400, y: -250}
+  m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6755556496917550576
 CanvasRenderer:

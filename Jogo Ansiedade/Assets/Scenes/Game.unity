@@ -11127,10 +11127,10 @@ MonoBehaviour:
   entregas: 
   tarefas: 
   loucas: 
-  numberOfMensagens: 0
-  numberOfPortas: 0
-  numberOfTarefas: 0
-  numberOfLoucas: 0
+  numberOfMensagens: 5
+  numberOfPortas: 4
+  numberOfTarefas: 5
+  numberOfLoucas: 3
   onMinigame: 0
 --- !u!114 &1453630924
 MonoBehaviour:
@@ -14106,7 +14106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2a12591dea5fac41932b5077f67c99e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TaskManager
-  allTasks: 0100000002000000030000000400000005000000
+  allTasks: 0100000001000000020000000200000002000000030000000300000003000000040000000500000005000000
   allCompulsions: 050000000600000007000000
   allEndings: 00000000090000000a0000000b000000
 --- !u!114 &1882357749

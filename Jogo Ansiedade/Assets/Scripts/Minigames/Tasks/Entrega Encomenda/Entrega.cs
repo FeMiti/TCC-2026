@@ -14,8 +14,6 @@ public class Entrega : MonoBehaviour, IMinigame
 
     [SerializeField] private TMP_Text question;
 
-    [SerializeField] private TMP_Text targetWordText;
-
     [SerializeField] private TMP_Text answerInput;
 
     private DoorData doorData;
@@ -35,7 +33,6 @@ public class Entrega : MonoBehaviour, IMinigame
         manager.entregas.RemoveAt(rand);
 
         currentWord=doorData.targetAnswer;
-        targetWordText.text=currentWord;
 
         question.text=doorData.question;
         
@@ -48,9 +45,11 @@ public class Entrega : MonoBehaviour, IMinigame
 
         if (Input.inputString.Length > 0)
         {
-            char typedChar=Input.inputString[0];
+            foreach(char typedChar in Input.inputString)
+            {
+                CheckCharacter(typedChar);
+            }
 
-            CheckCharacter(typedChar);
         }
     }
 

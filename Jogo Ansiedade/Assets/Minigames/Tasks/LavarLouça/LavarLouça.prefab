@@ -612,6 +612,10 @@ MonoBehaviour:
   dishes:
   - name: Prato Retangular
     dishPrefab: {fileID: 9055461418726425572, guid: c1690d9246cc36f488e4ec7f24cfc82a, type: 3}
+  - name: Prato Quadrado
+    dishPrefab: {fileID: 9055461418726425572, guid: aa99ff1a884ecff449b1a3083053f23f, type: 3}
+  - name: Prato Redondo
+    dishPrefab: {fileID: 9055461418726425572, guid: 383573dc370fca14a8d026ecf0cf947e, type: 3}
   timeBar: {fileID: 6593813022889598060}
 --- !u!1 &8305070617688409685
 GameObject:

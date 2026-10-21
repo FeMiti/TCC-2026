@@ -63,6 +63,7 @@ public class HomeworkMinigame : MonoBehaviour, IMinigame
                 isCorrect=true;
                 break;
             }
+
         }
 
         if (isCorrect)

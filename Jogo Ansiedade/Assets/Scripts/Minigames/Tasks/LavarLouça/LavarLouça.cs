@@ -32,7 +32,11 @@ public class LavarLouça : MonoBehaviour, IMinigame
     {
         minigameManager=manager;
 
-        currentDish = dishes[Random.Range(0,dishes.Count)];
+        int rand = Random.Range(0,manager.loucas.Count);
+
+        currentDish = dishes[rand];
+
+        manager.loucas.RemoveAt(rand);
     }
 
     private void Start()

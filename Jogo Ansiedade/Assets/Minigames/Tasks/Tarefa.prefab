@@ -495,7 +495,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 360}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5920783395489541685
 CanvasRenderer:
@@ -765,14 +765,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a71b08cd9dba574c9416ae5de00854b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeworkMinigame
-  homeworks:
-  - question: Qual a capital do  Brasil
-    answers:
-    - "Bras\xEDlia"
-    - Brasilia
-  - question: 2+2=?
+  mathHomework:
+  - question: "Quanto vale X na equa\xE7\xE3o 2x + 6 = 14? "
     answers:
     - 4
+  - question: "Quanto \xE9 20% de 150?"
+    answers:
+    - 30
+  - question: "Qual a m\xE9dia aritm\xE9tica dos n\xFAmeros 6, 8, e 10? "
+    answers:
+    - 8
+  - question: "Qual a \xE1rea de um ret\xE2ngulo de 5 cm de  largura, e 8 cm de comprimento?"
+    answers:
+    - 40
+    - 40 cm2
+    - "40 cm\xB2"
+  biologyHomework:
+  - question: "Qual mol\xE9cula cont\xE9m a maior parte das informa\xE7\xF5es gen\xE9ticas
+      dos seres humanos?"
+    answers:
+    - dna
+  - question: Qual processo permite que as plantas produzam glicose utilizando luz
+      solar?
+    answers:
+    - "fotoss\xEDntese"
+    - fotossintese
+  - question: "Qual \xF3rg\xE3o \xE9 respons\xE1vel por bombear o sangue pelo corpo
+      humano?"
+    answers:
+    - "cora\xE7\xE3o"
+    - coracao
+    - "cora\xE7ao"
+    - "corac\xE3o"
+  - question: Quantos cromossomos os seres humanos possuem?
+    answers:
+    - 46
+    - 46 cromossomos
+  historyHomework:
+  - question: "Qual civiliza\xE7\xE3o antiga construiu as famosas pir\xE2mides de
+      Giz\xE9?"
+    answers:
+    - egito
+    - egipcios
+    - "eg\xEDpcios"
+    - egipcia
+    - "eg\xEDpcia"
+  - question: Qual cidade-estado grega era conhecida por sua cultura militarista?
+    answers:
+    - esparta
+  - question: Em que ano a Segunda Guerra Mundial terminou?
+    answers:
+    - 1945
+  - question: "Durante a Guerra Fria, o mundo se dividiu em dois blocos pol\xEDtico-ideol\xF3gicos:
+      o Capitalista e o\u2026"
+    answers:
+    - socialista
+    - comunista
+  geographyHomework:
+  - question: "Em qual continente est\xE1 localizado o Brasil?"
+    answers:
+    - america
+    - "am\xE9rica"
+    - america do sul
+    - "am\xE9rica do sul"
+  - question: "Qual linha imagin\xE1ria divide a Terra em hemisf\xE9rios Norte e
+      Sul?"
+    answers:
+    - equador
+    - linha do equador
+  - question: "\u201CQual movimento da Terra \xE9 respons\xE1vel pela altern\xE2ncia
+      entre dia e noite?"
+    answers:
+    - "rota\xE7\xE3o"
+    - rotacao
+    - "rota\xE7ao"
+    - "rotac\xE3o"
+  scienceHomework:
+  - question: "Qual a f\xF3rmula molecular da \xE1gua?"
+    answers:
+    - h2o
+  - question: "Qual for\xE7a atrai os objetos at\xE9 o centro da Terra?"
+    answers:
+    - gravidade
+  - question: "Qual o s\xEDmbolo qu\xEDmico do oxig\xEAnio?"
+    answers:
+    - o
+  - question: "Qual \xE9 a unidade de medida de tempo no Sistema Internacional?"
+    answers:
+    - segundos
+    - segundo
   answerInput: {fileID: 7657428019942482524}
   question: {fileID: 5625251973826662179}
 --- !u!1 &7241512633423266083
@@ -810,7 +891,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3323435507278872965
 CanvasRenderer:
@@ -867,8 +948,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
