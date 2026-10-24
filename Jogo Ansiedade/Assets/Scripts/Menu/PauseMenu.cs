@@ -60,7 +60,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         SetCanvas(minigameCanvas,true);
         SetCanvas(gameUI,true);
-        Time.timeScale=1;
+        Time.timeScale=1f;
         isPaused=false;
     }
 

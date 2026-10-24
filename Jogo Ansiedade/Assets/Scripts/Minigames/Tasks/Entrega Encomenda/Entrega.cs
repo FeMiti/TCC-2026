@@ -28,7 +28,7 @@ public class Entrega : MonoBehaviour, IMinigame
 
         int rand = Random.Range(0,manager.entregas.Count);
 
-        doorData = entregas[rand];
+        doorData = entregas[manager.entregas[rand]];
 
         manager.entregas.RemoveAt(rand);
 
@@ -63,7 +63,7 @@ public class Entrega : MonoBehaviour, IMinigame
 
             if (currentIndex >= currentWord.Length)
             {
-                AnxietyManager.Instance.DecreaseAnxiety(10);
+                AnxietyManager.Instance.DecreaseAnxiety(5);
                 FinishMinigame();
             }
         }

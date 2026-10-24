@@ -69,7 +69,7 @@ public class MessageMinigame : MonoBehaviour, IMinigame
 
     public void RightAnswer()
     {
-        AnxietyManager.Instance.DecreaseAnxiety(10);
+        AnxietyManager.Instance.DecreaseAnxiety(5);
         FinishMinigame();
     }
 

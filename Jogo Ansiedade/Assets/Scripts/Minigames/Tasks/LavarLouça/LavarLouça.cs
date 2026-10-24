@@ -34,7 +34,7 @@ public class LavarLouça : MonoBehaviour, IMinigame
 
         int rand = Random.Range(0,manager.loucas.Count);
 
-        currentDish = dishes[rand];
+        currentDish = dishes[manager.loucas[rand]];
 
         manager.loucas.RemoveAt(rand);
     }
@@ -138,7 +138,7 @@ public class LavarLouça : MonoBehaviour, IMinigame
 
     public void FinishMinigame()
     {
-        AnxietyManager.Instance.DecreaseAnxiety(10);
+        AnxietyManager.Instance.DecreaseAnxiety(5);
         TaskManager.Instance.CompleteTask(TaskList.LavarLouça);
         minigameManager.CloseMinigame();
     }

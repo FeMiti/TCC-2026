@@ -29,7 +29,7 @@ public class HomeworkMinigame : MonoBehaviour, IMinigame
 
         int rand = Random.Range(0,manager.tarefas.Count);
 
-        switch (rand)
+        switch (manager.tarefas[rand])
         {
             case 0:
                 currentHomework=mathHomework[Random.Range(0,mathHomework.Count)];
@@ -78,7 +78,7 @@ public class HomeworkMinigame : MonoBehaviour, IMinigame
 
     private void RightAnswer()
     {
-        AnxietyManager.Instance.DecreaseAnxiety(10);
+        AnxietyManager.Instance.DecreaseAnxiety(5);
         FinishMinigame();
     }
 

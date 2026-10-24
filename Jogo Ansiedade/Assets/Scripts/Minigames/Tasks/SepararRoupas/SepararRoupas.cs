@@ -133,7 +133,7 @@ public class SepararRoupas : MonoBehaviour, IMinigame
 
         if (numberOfErrors <= 0)
         {
-            AnxietyManager.Instance.DecreaseAnxiety(10);
+            AnxietyManager.Instance.DecreaseAnxiety(5);
             FinishMinigame();
         }
         else
