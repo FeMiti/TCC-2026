@@ -97,7 +97,7 @@ public class RespiracaoCaixa : MonoBehaviour, IMinigame
     private void EndMinigame()
     {
         minigameOn=false;
-        AnxietyManager.Instance.DecreaseAnxiety(15);
+        AnxietyManager.Instance.DecreaseAnxiety(25);
         if (firstTime)
         {
             startText.text="REINICIAR";

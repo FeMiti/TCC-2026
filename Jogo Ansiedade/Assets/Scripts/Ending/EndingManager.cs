@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EndingManager : MonoBehaviour
@@ -33,6 +34,8 @@ public class EndingManager : MonoBehaviour
         {
             sister.SetActive(true);
         }
+        
+        DataCollector.Instance.ending=currentEnding;
 
         TaskManager.Instance.PickEndingTask();
     }

@@ -197,11 +197,20 @@ public class OrdenarLivros : MonoBehaviour, IMinigame
     private void FailMinigame()
     {
         AnxietyManager.Instance.IncreaseAnxiety(10);
+
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].numberOfMistakes++;
     }
 
     public void FinishMinigame()
     {
+        AnxietyManager.Instance.DecreaseAnxiety(5);
         minigameManager.CloseMinigame();
+
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].anxietyAfter=AnxietyManager.Instance.currentAnxiety;
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].timeAtConclusion=Time.time;
+
+        DataCollector.Instance.currentData++;
+
         TaskManager.Instance.PickNextTask();
     }
 }

@@ -133,7 +133,6 @@ public class SepararRoupas : MonoBehaviour, IMinigame
 
         if (numberOfErrors <= 0)
         {
-            AnxietyManager.Instance.DecreaseAnxiety(5);
             FinishMinigame();
         }
         else
@@ -161,6 +160,8 @@ public class SepararRoupas : MonoBehaviour, IMinigame
     public IEnumerator FailMinigame()
     {
         AnxietyManager.Instance.IncreaseAnxiety(5*numberOfErrors);
+
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].numberOfMistakes+=numberOfErrors;
 
         yield return StartCoroutine(BlinkRed());
 
@@ -219,6 +220,7 @@ public class SepararRoupas : MonoBehaviour, IMinigame
 
     public void FinishMinigame()
     {
+        AnxietyManager.Instance.DecreaseAnxiety(0);
         TaskManager.Instance.CompleteTask(TaskList.SepararRoupas);
         minigameManager.CloseMinigame();
     }

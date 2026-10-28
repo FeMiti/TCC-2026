@@ -63,13 +63,15 @@ public class Entrega : MonoBehaviour, IMinigame
 
             if (currentIndex >= currentWord.Length)
             {
-                AnxietyManager.Instance.DecreaseAnxiety(5);
+                AnxietyManager.Instance.DecreaseAnxiety(0);
                 FinishMinigame();
             }
         }
         else
         {
             AnxietyManager.Instance.IncreaseAnxiety(5);
+            
+            DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].numberOfMistakes++;
         }
     }
 

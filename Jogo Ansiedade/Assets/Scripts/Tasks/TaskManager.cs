@@ -49,6 +49,11 @@ public class TaskManager : MonoBehaviour
             ClockManager.Instance.timesSinceLastTask=0;
         }
 
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].anxietyAfter=AnxietyManager.Instance.currentAnxiety;
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].timeAtConclusion=Time.time;
+
+        DataCollector.Instance.currentData++;
+
         PickNextTask();
     }
 
@@ -61,6 +66,13 @@ public class TaskManager : MonoBehaviour
             return;
         }
 
+        GameData gameData = new GameData
+        {
+            timeStarted = Time.time,
+            anxietyBefore=AnxietyManager.Instance.currentAnxiety,
+            numberOfMistakes=0
+        };
+
         if(!lastWasCompulsion)
         {
             int roll = Random.Range(0,2);
@@ -69,6 +81,10 @@ public class TaskManager : MonoBehaviour
             if(roll+anxietyLevel>=3)
             {
                 PickNextCompulsion();
+
+                gameData.taskName=currentTask.ToString();
+                DataCollector.Instance.gameDatas.Add(gameData);
+
                 return;
             }
         }
@@ -79,6 +95,9 @@ public class TaskManager : MonoBehaviour
         taskUI.UpdateTaskText(remainingTasks.Count);
         HighlightManager.Instance.HighlightTask(currentTask);
         lastWasCompulsion=false;
+
+        gameData.taskName=currentTask.ToString();
+        DataCollector.Instance.gameDatas.Add(gameData);
     }
 
     private void PickNextCompulsion()

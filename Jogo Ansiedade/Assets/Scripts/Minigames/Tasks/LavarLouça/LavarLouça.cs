@@ -20,9 +20,9 @@ public class LavarLouça : MonoBehaviour, IMinigame
     private int cleanedDirt=0;
 
     [SerializeField] private Slider timeBar;
-    private float maxTime=5f;
+    private float maxTime=4f;
 
-    private float timeBarInterval=0.5f;
+    private float timeBarInterval=0.4f;
 
     private float currentTime;
 
@@ -71,9 +71,6 @@ public class LavarLouça : MonoBehaviour, IMinigame
         currentTime=maxTime;
         timeBar.maxValue=maxTime;
         timeBar.value=currentTime;
-
-        Debug.Log("Sujeiras totais = "+numberOfDirt);
-        Debug.Log("Sujeiras limpas = "+cleanedDirt + " da instancia"+ GetInstanceID());
     
         StartCoroutine(RunMinigame());
     }
@@ -114,15 +111,13 @@ public class LavarLouça : MonoBehaviour, IMinigame
         dirt.image.enabled=false;
 
         cleanedDirt++;
-        Debug.Log("Sujeira numero "+cleanedDirt+" limpa da instancia"+ GetInstanceID());
     }
 
     private void FailMinigame()
     {
         AnxietyManager.Instance.IncreaseAnxiety(15);
 
-        Debug.Log("Sujeiras totais = "+numberOfDirt);
-        Debug.Log("Sujeiras limpas = "+cleanedDirt+" da instancia"+ GetInstanceID());
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].numberOfMistakes++;
 
         for(int i = 0; i < numberOfDirt; i++)
         {
@@ -138,7 +133,7 @@ public class LavarLouça : MonoBehaviour, IMinigame
 
     public void FinishMinigame()
     {
-        AnxietyManager.Instance.DecreaseAnxiety(5);
+        AnxietyManager.Instance.DecreaseAnxiety(0);
         TaskManager.Instance.CompleteTask(TaskList.LavarLouça);
         minigameManager.CloseMinigame();
     }

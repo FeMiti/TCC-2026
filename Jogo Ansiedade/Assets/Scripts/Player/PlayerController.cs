@@ -43,8 +43,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         controller = GetComponent<CharacterController>();
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     public void TeleportPlayer(Vector3 localTeleportado)
@@ -57,7 +55,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if(manager.onMinigame || PauseMenu.Instance.isPaused) return;
+        if(manager.onMinigame || PauseMenu.Instance.isPaused || PauseMenu.Instance.onEnding) return;
         InputManagement();
         MouseLook();
         Movement();

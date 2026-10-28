@@ -26,6 +26,9 @@ public class TaskMinigameInteract : MonoBehaviour, IInteract
         if (minigamePrefab != null)
         {
             HighlightManager.Instance.ClearHighlight();
+
+            DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].timeAtReach=Time.time;
+
             MinigameManager.Instance.OpenMinigame(minigamePrefab);
         }
         else

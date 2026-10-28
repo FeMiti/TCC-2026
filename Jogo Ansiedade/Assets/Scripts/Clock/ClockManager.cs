@@ -15,10 +15,10 @@ public class ClockManager : MonoBehaviour
     public int currentHour;
     public int currentMinute;
 
-    private float timeUntilChange=10f;
+    private float timeUntilChange=7.5f;
 
     private int timesUntilProcrastination=2;
-    private int timesUntilAnxiety=1;
+    private int timesUntilAnxiety=2;
     public int timesSinceLastTask=0;
     public int currentProcrastination;
 
@@ -50,7 +50,7 @@ public class ClockManager : MonoBehaviour
 
                 yield return new WaitForSeconds(timeUntilChange);
 
-                currentMinute+=10;
+                currentMinute+=5;
                 timesSinceLastTask++;
 
                 if (timesSinceLastTask >= timesUntilProcrastination)

@@ -132,6 +132,8 @@ public class LavarMaos : MonoBehaviour, IMinigame
     {
         AnxietyManager.Instance.IncreaseAnxiety(10);
 
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].numberOfMistakes++;
+
         yield return StartCoroutine(BlinkRed());
 
         currentIndex=0;
@@ -156,7 +158,14 @@ public class LavarMaos : MonoBehaviour, IMinigame
 
     public void FinishMinigame()
     {
+        AnxietyManager.Instance.DecreaseAnxiety(5);
         minigameManager.CloseMinigame();
+
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].anxietyAfter=AnxietyManager.Instance.currentAnxiety;
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].timeAtConclusion=Time.time;
+
+        DataCollector.Instance.currentData++;
+
         TaskManager.Instance.PickNextTask();
     }
 }

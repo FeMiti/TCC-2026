@@ -99,6 +99,9 @@ public class ChecarPorta : MonoBehaviour, IMinigame
     private void MinigameFail()
     {
         AnxietyManager.Instance.IncreaseAnxiety(10);
+
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].numberOfMistakes++;
+
         firstTime=false;
         timesChecked=0;
         readyButton.SetActive(true);
@@ -106,7 +109,14 @@ public class ChecarPorta : MonoBehaviour, IMinigame
 
     public void FinishMinigame()
     {
+        AnxietyManager.Instance.DecreaseAnxiety(5);
         minigameManager.CloseMinigame();
+
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].anxietyAfter=AnxietyManager.Instance.currentAnxiety;
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].timeAtConclusion=Time.time;
+
+        DataCollector.Instance.currentData++;
+        
         TaskManager.Instance.PickNextTask();
     }
 }

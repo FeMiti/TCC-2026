@@ -78,13 +78,16 @@ public class HomeworkMinigame : MonoBehaviour, IMinigame
 
     private void RightAnswer()
     {
-        AnxietyManager.Instance.DecreaseAnxiety(5);
+        AnxietyManager.Instance.DecreaseAnxiety(0);
         FinishMinigame();
     }
 
     private void WrongAnswer()
     {
         AnxietyManager.Instance.IncreaseAnxiety(10);
+
+        DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].numberOfMistakes++;
+
         answerInput.text="";
     }
 
