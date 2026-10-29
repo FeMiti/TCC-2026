@@ -23,6 +23,8 @@ public class RespiracaoCaixa : MonoBehaviour, IMinigame
     private bool minigameOn=false;
     private bool firstTime=true;
 
+    private RelaxData relaxData;
+
     public void Setup(MinigameManager manager)
     {
         minigameManager=manager;
@@ -74,6 +76,7 @@ public class RespiracaoCaixa : MonoBehaviour, IMinigame
 
         if (Input.GetKeyUp(requiredKey) && isHolding)
         {
+            relaxData.numberOfMistakes++;
             breathingSliders[currentInstruction].value=0f;
             isHolding=false;
         }
@@ -81,6 +84,15 @@ public class RespiracaoCaixa : MonoBehaviour, IMinigame
 
     public void StartMinigame()
     {
+
+        relaxData = new RelaxData
+        {
+            taskNumber=DataCollector.Instance.currentData,
+            timeStarted=Time.time,
+            anxiety = AnxietyManager.Instance.currentAnxiety,
+            numberOfMistakes=0
+        };
+
         mainButtons.SetActive(false);
         if (!firstTime)
         {
@@ -96,6 +108,9 @@ public class RespiracaoCaixa : MonoBehaviour, IMinigame
 
     private void EndMinigame()
     {
+        relaxData.timeAtConclusion=Time.time;
+        DataCollector.Instance.relaxDatas.Add(relaxData);
+
         minigameOn=false;
         AnxietyManager.Instance.DecreaseAnxiety(25);
         if (firstTime)

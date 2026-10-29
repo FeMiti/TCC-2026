@@ -7,6 +7,7 @@ public class DataCollector : MonoBehaviour
     public List<GameData> gameDatas = new List<GameData>();
     public int currentData=0;
     public EndingList ending;
+    public List<RelaxData> relaxDatas = new List<RelaxData>();
 
     private void Awake()
     {

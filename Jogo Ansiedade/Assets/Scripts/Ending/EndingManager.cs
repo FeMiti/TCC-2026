@@ -34,6 +34,12 @@ public class EndingManager : MonoBehaviour
         {
             sister.SetActive(true);
         }
+
+        if (currentEnding != EndingList.TasksCompleted)
+        {
+            DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].anxietyAfter=AnxietyManager.Instance.currentAnxiety;
+            DataCollector.Instance.gameDatas[DataCollector.Instance.currentData].timeAtConclusion=Time.time;
+        }
         
         DataCollector.Instance.ending=currentEnding;
 

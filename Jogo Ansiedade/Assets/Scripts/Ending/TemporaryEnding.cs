@@ -23,6 +23,17 @@ public class TemporaryEnding : MonoBehaviour
             scoreText.Append($"{i}: Nome = {data[i].taskName} - Tempo p/ chegar = {data[i].timeAtReach-data[i].timeStarted:F2} - Tempo p/ concluir = {data[i].timeAtConclusion-data[i].timeAtReach:F2} - Tempo total = {data[i].timeAtConclusion-data[i].timeStarted:F2} - N de erros = {data[i].numberOfMistakes} - Diff de ansiedade = {data[i].anxietyAfter-data[i].anxietyBefore} \n");
         }
 
+        scoreText.Append($"\n");
+
+        List<RelaxData> relax = DataCollector.Instance.relaxDatas;
+
+        for(int i = 0; i < DataCollector.Instance.relaxDatas.Count; i++)
+        {
+            scoreText.Append($"{i}: Na task = {relax[i].taskNumber} - Tempo p/ concluir = {relax[i].timeAtConclusion-relax[i].timeStarted:F2} - N de erros = {relax[i].numberOfMistakes} - Com ansiedade = {relax[i].anxiety}\n");
+        }
+
+        scoreText.Append($"\n");
+
         scoreText.Append($"Final obtido = {DataCollector.Instance.ending}");
 
         score.text = scoreText.ToString();
