@@ -32,9 +32,31 @@ public class LavarLouça : MonoBehaviour, IMinigame
     {
         minigameManager=manager;
 
-        int rand = Random.Range(0,manager.loucas.Count);
+        Debug.Log("=== SETUP LAVAR LOUÇA ===");
+        Debug.Log($"Instância do Manager: {manager.GetInstanceID()}");
+        Debug.Log($"Quantidade de louças disponíveis: {manager.loucas.Count}");
+        Debug.Log($"Conteúdo de loucas: {string.Join(", ", manager.loucas)}");
+        Debug.Log($"Quantidade de dishes: {dishes.Count}");
 
-        currentDish = dishes[manager.loucas[rand]];
+        if (manager.loucas.Count == 0)
+        {
+            Debug.LogError("A lista loucas está vazia!");
+            return;
+        }
+
+        int rand = Random.Range(0,manager.loucas.Count);
+        int dishIndex = manager.loucas[rand];
+
+        Debug.Log($"Posição aleatória: {rand}");
+        Debug.Log($"Índice da louça selecionada: {dishIndex}");
+
+        if (dishIndex < 0 || dishIndex >= dishes.Count)
+        {
+            Debug.LogError($"Índice inválido para dishes: {dishIndex}");
+            return;
+        }
+
+        currentDish = dishes[dishIndex];
 
         manager.loucas.RemoveAt(rand);
     }
